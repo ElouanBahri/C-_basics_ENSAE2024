@@ -5,7 +5,7 @@
 #include <cmath>  
 using namespace std;
 
-int PB1() {
+void PB1() {
 
     int n = 0;
     int n2 = 1;
@@ -20,14 +20,30 @@ int PB1() {
 
     };
     cout << "factoriel  " << n << " = " << n2;
-    return n2;
-}
 
+}
+void PB2() {
+    float x;
+    int n;
+    float result = 1;  
+
+    cout << "Enter a positive number: ";
+    cin >> x;
+
+    cout << "Enter an integer number: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        result *= x;   
+    }
+
+    cout << x << "^" << n << " = " << result << endl;  
+}
 
 
 int main(int argc, const char * argv[]) {
 
-    int (*pbFunctions[])() = { PB1 };  // Add all your PB functions here
+    void (*pbFunctions[])() = { PB1, PB2 };  // Add all your PB functions here
 
     int choice;
     cout << "Choose the problem number \n";
