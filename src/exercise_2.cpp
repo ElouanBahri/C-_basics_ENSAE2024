@@ -40,10 +40,32 @@ void PB2() {
     cout << x << "^" << n << " = " << result << endl;  
 }
 
+int sum(int n) {
+
+    if (n==1){
+        return 1;
+    }
+    else{
+        return n + sum(n - 1) ; 
+    }
+
+}
+
+void PB3() {
+    
+    int n;
+    
+    cout << "Enter an integer number: ";
+    cin >> n;
+
+
+    cout << "The sum of the numbers between 1 and " << n << " is : " << sum(n) << endl;  
+}
+
 
 int main(int argc, const char * argv[]) {
 
-    void (*pbFunctions[])() = { PB1, PB2 };  // Add all your PB functions here
+    void (*pbFunctions[])() = { PB1, PB2, PB3 };  // Add all your PB functions here
 
     int choice;
     cout << "Choose the problem number \n";
