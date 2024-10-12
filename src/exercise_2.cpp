@@ -62,16 +62,32 @@ void PB3() {
     cout << "The sum of the numbers between 1 and " << n << " is : " << sum(n) << endl;  
 }
 
+void PB4() {
+    
+    int a;
+    int b;  
+
+    cout << "Enter an integer number a : ";
+    cin >> a;
+
+    cout << "Enter an integer number b : ";
+    cin >> b;
+
+    for (int i = a; i <= b; i++) {
+        cout << i << endl;  
+    }
+}
+
 
 int main(int argc, const char * argv[]) {
 
-    void (*pbFunctions[])() = { PB1, PB2, PB3 };  // Add all your PB functions here
+    void (*pbFunctions[])() = { PB1, PB2, PB3, PB4 };  // Add all your PB functions here
 
     int choice;
     cout << "Choose the problem number \n";
     cin >> choice;
     
-    cout << "This is the problem " << choice << "solution !\n";
+    cout << "This is the problem " << choice << " solution !\n";
     pbFunctions[choice - 1]();
     cout << "\n";
 
