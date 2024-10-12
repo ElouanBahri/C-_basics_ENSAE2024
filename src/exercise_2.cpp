@@ -78,10 +78,30 @@ void PB4() {
     }
 }
 
+int Fibonacci(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    else {
+        return Fibonacci(n - 1) + Fibonacci(n - 2);
+    }
+}
+
+void PB5() {
+
+    int n;
+    
+    cout << "Enter an integer number: ";
+    cin >> n;
+
+
+    cout << "The  "<< n <<"-th Fibonacci number is : " << Fibonacci(n) << endl;  
+}
+
 
 int main(int argc, const char * argv[]) {
 
-    void (*pbFunctions[])() = { PB1, PB2, PB3, PB4 };  // Add all your PB functions here
+    void (*pbFunctions[])() = { PB1, PB2, PB3, PB4, PB5};  // Add all your PB functions here
 
     int choice;
     cout << "Choose the problem number \n";
