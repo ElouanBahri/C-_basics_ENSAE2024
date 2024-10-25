@@ -12,5 +12,22 @@ This repository contains basic C++ programs and examples that demonstrate fundam
 
 If you're using the `clang++` compiler on macOS, here are a few important commands to help you get started:
 
+To compile a C++ file (e.g, source_file.cpp) and generate an executable, use:
 ```bash
 clang++ -o output_file_name source_file.cpp
+
+```
+
+Tu run the Compiled Program :
+
+```bash
+./output_file_name 
+
+```
+
+To format your code : 
+
+
+```bash
+
+clang-format -i src/TP2/Pointer_references_arrays.cpp
